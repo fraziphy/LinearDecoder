@@ -73,18 +73,20 @@ class LinearDecoder:
     LinearDecoder Usage Guide:
 
     1. Initialize the decoder:
-       decoder = funcs.LinearDecoder(n_neurons, duration, dt, tau, lambda_reg, rng)
+       decoder = funcs.LinearDecoder(dt, tau, lambda_reg, rng)
 
        Parameters:
-       - n_neurons: Number of neurons in the recording
-       - duration: Total duration of the recording in milliseconds
        - dt: Recording resolution (time step) in milliseconds
        - tau: Time constant for the exponential kernel in milliseconds
        - lambda_reg: Regularization strength to prevent overfitting
        - rng: Random number generator (e.g., np.random.default_rng(seed))
 
     2. Preprocess data:
-       filtered_spikes = decoder.preprocess_data(spikes_trials_all)
+       filtered_spikes = decoder.preprocess_data(spikes_trials_all, n_neurons, duration)
+
+       Parameters:
+       - n_neurons: Number of neurons in the recording
+       - duration: Total duration of the recording in milliseconds
 
        Note: spikes_trials_all should be a list of trials, where each trial is a list of tuples (spike_time, neuron_id).
        The resulting filtered_spikes will have shape (n_trials, n_steps, n_neurons).
