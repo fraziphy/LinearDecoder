@@ -59,7 +59,7 @@ $ python -m nose2
 
 To **install** the _**LinearDecoder**_ module from GitHub, run the following command:
 ```
-!pip install git+ssh://git@github.com/fraziphy/linear_decoder.git
+!pip install git+ssh://git@github.com/fraziphy/LinearDecoder.git
 ```
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ To **install** the _**LinearDecoder**_ module from GitHub, run the following com
 To **uninstall** the module, please copy and execute the following command in a single cell:
 
 ```
-!python -m pip uninstall linear_decoder --yes
+!python -m pip uninstall LinearDecoder --yes
 ```
 
 ------------------------------------------------------------------------------------------------------------
@@ -142,7 +142,7 @@ This will print the usage instructions directly in your Python environment.
 
 ## Example Notebook
 
-A Jupyter notebook has been included to demonstrate how to use the LinearDecoder class with both real and dummy data. The notebook verifies that the defined class can perform decoding tasks effectively.
+A Jupyter notebook has been included to demonstrate how to use the LinearDecoder class with dummy data. The notebook verifies that the defined class can perform decoding tasks effectively.
 
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -161,9 +161,8 @@ LinearDecoder/
 ├── tests/
 │   └── test_custom_funcs.py
 ├── examples/
-│   ├── notebooks/
-│   │   ├── Example_usage.ipynb
-│   │   └── Example_usage.ipynb
+│   ├── notebook/
+│   │ └── LinearDecoder.ipynb
 │   └── scripts/
 │       ├── generate_data.py
 │       └── plots.py
@@ -173,33 +172,22 @@ LinearDecoder/
 
 ```
 
-- data: This directory contains two subdirectories: "processed" and "raw". "processed" is intended for storing processed data files, such as pickled dataframes (my_file.pkl), while "raw" is for storing raw data files.
-    - processed/my_file.pkl: A processed data file.
-    - raw/my_file.pkl: A raw data file.
+- src: This directory holds the directory that contains the LinearDecoder module.
+    -lineardecoder: This directory holds the core functionality of the LinearDecoder module.
+    	- __init__.py: Marks the directory as a Python package.
+    	- funcs.py: Includes functions and classes defining the main functionalities of the LinearDecoder module.
 
-
-- iQuanta: This directory holds the core functionality of the iQuanta module.
-    - __init__.py: Marks the directory as a Python package.
-    - config.py: Contains configuration settings for the iQuanta module.
-    - funcs.py: Includes functions and classes defining the main functionalities of the iQuanta module.
-
-    
-- notebook: This directory contains Jupyter notebooks for exploratory analysis and demonstrations related to the iQuanta module.
-    - iQuanta.ipynb: Jupyter notebook for iQuanta module usage or demonstrations.
-
-    
-- scripts: This directory contains Python scripts for various tasks related to the iQuanta module, such as data processing or visualization.
-    - __init__.py: Marks the directory as a Python package.
-    - config.py: Configuration settings specific to the scripts.
-    - generate_raw_data.py: Script for generating raw data.
-    - plot_figures.py: Script for plotting figures.
-    - process_data.py: Script for processing data.
-
-    
-- tests: This directory contains unit tests for the iQuanta module.
+- tests: This directory contains unit tests for the LinearDecoder module.
     - test_funcs.py: Unit tests for the functions module.
+   
+- examples: This directory contains the directories of notebooks and scripts, which are defined for manifesting example usage of the module.
+    - notebook: This directory contains the Jupyter notebook for exploratory analysis and demonstrations related to the LinearDecoder module.
+   	 - LinearDecoder.ipynb: Jupyter notebook for LinearDecoder module usage and demonstrations.
+	 
+    - scripts: This directory contains Python scripts for generating dummy data and plotting the raster plot in the LinearDecoder.ipynb.
+        - generate_data.py: Script for generating dummy data.
+        - plots.py: Script for plotting figures.
 
-    
 - LICENSE: The license file for the project.
 
 - README.md: The README file providing an overview of the project, its purpose, and how to use it.
