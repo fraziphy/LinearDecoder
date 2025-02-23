@@ -1,4 +1,4 @@
-# funcs.py
+# linear_decoder.py
 
 import numpy as np
 from sklearn.model_selection import KFold
