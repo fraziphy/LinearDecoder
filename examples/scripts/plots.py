@@ -42,7 +42,7 @@ def plot_raster(spike_1):
     plt.show()
 
 
-def plot_resulta(signal, prediction_train=None, prediction_test=None):
+def plot_results(signal, prediction_train=None, prediction_test=None):
     """
     Plot original signals and their predictions if available.
 
