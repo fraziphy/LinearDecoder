@@ -32,7 +32,7 @@ def plot_raster(spike_1):
     ax.set_ylabel('Neuron ID')
 
     # Set the title of the plot
-    ax.set_title('Spike Raster Plot')
+    ax.set_title('Spike Raster Plot for a Sample Trial')
 
     # Adjust y-axis limits to show all neurons
     # The 0.5 offset creates a small margin above and below the plotted neurons
@@ -40,3 +40,36 @@ def plot_raster(spike_1):
 
     # Display the plot
     plt.show()
+
+
+def plot_resulta(signal, prediction_train=None, prediction_test=None):
+    """
+    Plot original signals and their predictions if available.
+
+    Args:
+    signal (np.array): Original signal array of shape (2, time_steps)
+    prediction_train (np.array, optional): Predicted signal for training set
+    prediction_test (np.array, optional): Predicted signal for test set
+    """
+    plt.figure(figsize=(12, 6))  # Create a new figure with specified size
+
+    # Plot original signals
+    plt.plot(signal[0], "-k", label="Auditory Stimulus")  # Plot auditory stimulus in black solid line
+    plt.plot(signal[1], "--k", label="Visual Stimulus")  # Plot visual stimulus in black dashed line
+
+    # If predictions are provided, plot them
+    if prediction_train is not None:
+        plt.plot(prediction_train[0,:,0], "b", alpha=0.6, label="Decoded Auditory Stimulus (Train set)")  # Plot predicted auditory stimulus for train set
+        plt.plot(prediction_train[0,:,1], "r", alpha=0.6, label="Decoded Visual Stimulus (Train set)")  # Plot predicted visual stimulus for train set
+
+        plt.plot(prediction_test[0,:,0], "c", alpha=0.6, label="Decoded Auditory Stimulus (Test set)")  # Plot predicted auditory stimulus for test set
+        plt.plot(prediction_test[0,:,1], "m", alpha=0.6, label="Decoded Visual Stimulus (Test set)")  # Plot predicted visual stimulus for test set
+
+    plt.legend()  # Add legend to the plot
+    plt.xlabel("Time Steps")  # Label x-axis
+    plt.ylabel("Signal Amplitude")  # Label y-axis
+    if prediction_train is not None:
+        plt.title("Original and Decoded Signals")  # Add title to the plot
+    else:
+        plt.title("Original Signals")  # Add title to the plot
+    plt.show()  # Display the plot

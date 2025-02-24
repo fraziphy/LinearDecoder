@@ -212,7 +212,7 @@ class LinearDecoder:
         Returns:
             numpy.ndarray: RMSE for each signal dimension.
         """
-        return np.sqrt(((prediction - signal.T)**2).mean(axis=0))
+        return np.sqrt(((prediction_train - signal.T)**2).mean(axis=1)).mean(axis=0)
 
     def stratified_cv(self, filtered_spikes, signal, n_splits=5):
         """
