@@ -212,7 +212,7 @@ class LinearDecoder:
         Returns:
             numpy.ndarray: RMSE for each signal dimension.
         """
-        return np.sqrt(((prediction_train - signal.T)**2).mean(axis=1)).mean(axis=0)
+        return np.sqrt(((prediction - signal.T)**2).mean(axis=1)).mean(axis=0)
 
     def stratified_cv(self, filtered_spikes, signal, n_splits=5):
         """
@@ -246,7 +246,6 @@ class LinearDecoder:
         test_errors = []
         all_weights = []  # List to store weights from each fold
 
-
         # Perform cross-validation
         for train_idx, test_idx in kf.split(filtered_spikes):
             # Prepare training data
@@ -271,12 +270,12 @@ class LinearDecoder:
             train_errors.append(self.compute_rmse(train_prediction, signal))
             test_errors.append(self.compute_rmse(test_prediction, signal))
 
-        # Reshape errors to (n_folds, n_signals)
-        n_signals = signal.shape[0]
-        train_errors = np.array(train_errors).reshape(-1, n_signals)
-        test_errors = np.array(test_errors).reshape(-1, n_signals)
+        # Convert errors to numpy arrays
+        train_errors = np.array(train_errors)
+        test_errors = np.array(test_errors)
 
         return train_errors, test_errors, all_weights
+
 
 
 

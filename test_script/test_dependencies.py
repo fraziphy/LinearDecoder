@@ -43,10 +43,11 @@ class TestLinearDecoder(unittest.TestCase):
 
     def test_compute_rmse(self):
         _, signal = self.generate_dummy_data()
-        prediction = np.random.rand(self.n_steps)
+        prediction = np.random.rand(self.n_trials, self.n_steps, 1)  # Shape: (n_trials, n_steps, n_signals)
         rmse = self.decoder.compute_rmse(prediction, signal)
         self.assertIsInstance(rmse, np.ndarray)
-        self.assertEqual(rmse.shape, (10000,))
+        self.assertEqual(rmse.shape, (signal.shape[0],))  # Check if the shape matches the number of signals
+        self.assertTrue(np.all(rmse >= 0))  # Ensure all RMSE values are non-negative
 
     def test_stratified_cv(self):
         spikes_trials_all, signal = self.generate_dummy_data()
@@ -54,8 +55,8 @@ class TestLinearDecoder(unittest.TestCase):
 
         train_errors, test_errors, all_weights = self.decoder.stratified_cv(filtered_spikes, signal, n_splits=5)
 
-        self.assertEqual(train_errors.shape, (50000, 1))  # Update expected shape
-        self.assertEqual(test_errors.shape, (50000, 1))   # Update expected shape
+        self.assertEqual(train_errors.shape, (5, 1))  # 5 folds, 1 signal dimension
+        self.assertEqual(test_errors.shape, (5, 1))   # 5 folds, 1 signal dimension
         self.assertEqual(len(all_weights), 5)  # 5 sets of weights
 
     def test_spikes_to_matrix(self):
