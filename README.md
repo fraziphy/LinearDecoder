@@ -65,7 +65,7 @@ $ python -m nose2
 
 To **install** the _**LinearDecoder**_ module from GitHub, run the following command:
 ```
-!pip install git+ssh://git@github.com/fraziphy/linear-decoder.git
+!pip install git+ssh://git@github.com/fraziphy/linear_decoder.git
 ```
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ To **install** the _**LinearDecoder**_ module from GitHub, run the following com
 To **uninstall** the module, please copy and execute the following command in a single cell:
 
 ```
-!python -m pip uninstall linear-decoder.git --yes
+!python -m pip uninstall linear_decoder.git --yes
 ```
 
 ------------------------------------------------------------------------------------------------------------
