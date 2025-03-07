@@ -268,4 +268,4 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE)
 ## Contact
 
 - **Contact information:** [email](farhad.razi.1988@gmail.com)
-# _**Linear_decoder**_
+# _**Linear-decoder**_
