@@ -13,7 +13,7 @@ except IOError:
 
 setup(
     # Name of the package
-    name='lineardecoder',
+    name='linear-decoder',
 
     # Packages to include into the distribution
     packages=find_packages('src'),  # Find packages under the 'src' directory
