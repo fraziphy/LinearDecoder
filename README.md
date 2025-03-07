@@ -73,7 +73,7 @@ To **install** the _**LinearDecoder**_ module from GitHub, run the following com
 To **uninstall** the module, please copy and execute the following command in a single cell:
 
 ```
-!python -m pip uninstall linear-decoder --yes
+!pip uninstall linear-decoder -y
 ```
 
 ------------------------------------------------------------------------------------------------------------
