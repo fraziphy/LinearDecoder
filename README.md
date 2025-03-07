@@ -1,8 +1,8 @@
-# linear_decoder.py
+# linear-decoder
 
 ## Overview
 
-### _**linear_decoder.py**_ is a Python module designed to integrate techniques required for reconstructing external stimuli from evoked neural signals in response to external stimuli using machine learning approaches. This tool is particularly useful in neuroscience research, where understanding the relationship between neural activity and external stimuli is crucial.
+### _**linear_decoder**_ is a Python module designed to integrate techniques required for reconstructing external stimuli from evoked neural signals in response to external stimuli using machine learning approaches. This tool is particularly useful in neuroscience research, where understanding the relationship between neural activity and external stimuli is crucial.
 
 One of the fascinating challenges in neuroscience is assessing how reliably neural responses reflect external stimuli. A common approach to this is decoding external stimuli from evoked neural responses, which can include various forms of neural data such as:
 
@@ -10,7 +10,7 @@ One of the fascinating challenges in neuroscience is assessing how reliably neur
 - Local Field Potentials (LFP).
 - Electroencephalography (EEG) signals.
 
-The _**LinearDecoder**_ class, defined in the _**linear_decoder.py**_ module, provides functionality for this decoding process, facilitating the analysis of neural recordings and enhancing the interpretability of decoding results. This tool is valuable for researchers studying neural coding, sensory processing, and brain-computer interfaces.
+The _**LinearDecoder**_ class, defined in the _**linear_decoder**_ module, provides functionality for this decoding process, facilitating the analysis of neural recordings and enhancing the interpretability of decoding results. This tool is valuable for researchers studying neural coding, sensory processing, and brain-computer interfaces.
 
 ### Methodology
 
@@ -51,7 +51,7 @@ By providing a tool for quantitative analysis of neural responses, _**LinearDeco
 
 ## Installation
 
-To install the _**linear_decoder.py**_ module, ensure the necessary Python libraries **numpy** and **sklearn** are installed. Please verify that the corresponding dependencies are present.
+To install the _**linear_decoder**_ module, ensure the necessary Python libraries **numpy** and **sklearn** are installed. Please verify that the corresponding dependencies are present.
 
 ### Optional testing instructions for contributors or interested users:
 To confirm that the scripts and required libraries are installed on your local machine, navigate to the  _**linear_decoder**_  directory. You can begin by testing the Python scripts within the project and scripts directories. To do this, install the Python library nose2 and execute it from the command line:
@@ -65,7 +65,7 @@ $ python -m nose2
 
 To **install** the _**LinearDecoder**_ module from GitHub, run the following command:
 ```
-!pip install git+ssh://git@github.com/fraziphy/linear_decoder.git
+!pip install git+ssh://git@github.com/fraziphy/linear-decoder.git
 ```
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ To **install** the _**LinearDecoder**_ module from GitHub, run the following com
 To **uninstall** the module, please copy and execute the following command in a single cell:
 
 ```
-!python -m pip uninstall linear_decoder.git --yes
+!python -m pip uninstall linear-decoder --yes
 ```
 
 ------------------------------------------------------------------------------------------------------------
@@ -268,4 +268,4 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE)
 ## Contact
 
 - **Contact information:** [email](farhad.razi.1988@gmail.com)
-# _**Linear_decoder.py**_
+# _**Linear_decoder**_
