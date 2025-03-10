@@ -21,7 +21,7 @@ setup(
 
     # Start with a small number and increase it with every change you make
     # https://semver.org
-    version='0.1.0',
+    version='1.0.0',
 
     # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     license='GNU General Public License v3 (GPLv3)',
@@ -43,7 +43,7 @@ setup(
     url='https://github.com/fraziphy/linear-decoder',  # Correct the repo name
 
     # Link from which the project can be downloaded
-    download_url='https://github.com/fraziphy/linear-decoder/archive/refs/tags/v0.1.0.tar.gz',
+    download_url='https://github.com/fraziphy/linear-decoder/archive/refs/tags/v1.0.0.tar.gz',
 
     # List of keyword arguments
     keywords=['neural decoding', 'machine learning', 'neuroscience', 'stimulus reconstruction'],

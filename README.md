@@ -65,7 +65,7 @@ $ python -m nose2
 
 To **install** the _**LinearDecoder**_ module from GitHub, run the following command:
 ```
-!pip install git+ssh://git@github.com/fraziphy/linear-decoder.git
+pip install git+ssh://git@github.com/fraziphy/linear-decoder.git@v1.0.0
 ```
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ To **install** the _**LinearDecoder**_ module from GitHub, run the following com
 To **uninstall** the module, please copy and execute the following command in a single cell:
 
 ```
-!pip uninstall linear-decoder -y
+pip uninstall linear-decoder@v1.0.0 -y
 ```
 
 ------------------------------------------------------------------------------------------------------------
@@ -174,6 +174,7 @@ linear-decoder/
 │       └── plots.py
 ├── LICENSE.txt
 ├── README.md
+├── CHANGELOG.md
 └── setup.py
 
 ```
@@ -197,6 +198,8 @@ linear-decoder/
 - LICENSE: The license file for the project.
 
 - README.md: The README file providing an overview of the project, its purpose, and how to use it.
+
+- CHANGELOG.md: Documents the version history of the project, listing notable changes, additions, and fixes for each release.
 
 - setup.py: The setup script for installing the _**linear_decoder**_ module as a Python package.
 
@@ -268,4 +271,22 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE)
 ## Contact
 
 - **Contact information:** [email](farhad.razi.1988@gmail.com)
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+## Acknowledgments
+
+This work was supported by the Dutch Research Council (NWO Vidi grant VI.Vidi.213.137) awarded to Dr. [Fleur Zeldenrust](https://fleurzeldenrust.nl/).
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 # _**Linear-decoder**_
